@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <title>Bootstrap 5 Form (Validation)</title>
+  </head>
+  <body class="bg-light">
+    <div class="container py-5">
+    	<!-- <h1 class="display-2 text-danger mb-5">Bootstrap5 Form (Validation)</h1> -->
+    <a href="index.html">Home</a> | <a href="about.html">About</a> | <a href="gallery.html">Gallery</a> | <a href="registration.html">Registration</a>
+    <br><br><br>
+    <div class="row justify-content-center">
+    	<div class="col-md-10 col-lg-8">
+    <form action="" class="needs-validation" novalidate>
+    	<div class="card">
+		  <div class="card-header bg-primary text-white display-5">
+		  	<i class="bi bi-person-circle"></i> User Registration</div>
+		  <div class="card-body">
+		  		<p class="text-info">Fill in the data below</p>
+		    	<div class="row gx-2 gy-3">
+		    		<div class="col-md-6">
+		    			<label for="txtfname" class="form-label">First Name</label>
+		    			<input type="text" class="form-control" id="txtfname" required>
+		    			<div class="valid-feedback">Alright!!!</div>
+		    			<div class="invalid-feedback">Enter first name</div>
+		    		</div>
+		    		<div class="col-md-6 position-relative">
+		    			<label for="txtlname" class="form-label">Last Name</label>
+		    			<input type="text" class="form-control" id="txtlname" required>
+		    			<!-- <p class="valid-tooltip">Well Done!!!</p> -->
+		    			<div class="invalid-tooltip">Last name must not be blank</div>
+		    		</div>
+		    		<div class="col-md-6">
+		    			<label for="txtemail" class="form-label">Email Id</label>
+		    			<input type="email" class="form-control" id="txtemail" required>
+		    			<div class="valid-tooltip">Great!!!</div>
+		    			<div class="invalid-tooltip">Enter correct email address</div>
+		    		</div>
+		    		<div class="col-md-6">
+		    			<label for="txtuname" class="form-label">Username</label>
+		    			<input type="text" class="form-control" id="txtuname" required>
+		    		</div>
+		    		<div class="col-md-6">
+		    			<label for="txtpass" class="form-label">Password</label>
+		    			<input type="password" class="form-control" id="txtpass" required>
+		    		</div>
+		    		<div class="col-md-6">
+		    			<label for="txtcpass" class="form-label">Confirm Password</label>
+		    			<input type="password" class="form-control" id="txtcpass" required>
+		    		</div>
+		    		<div class="col-md-4">
+		    			<label for="optgender" class="form-label">Gender</label>
+		    			<select id="optgender" class="form-select" required>
+		    				<option value="">Choose option</option>
+		    				<option value="">Male</option>
+		    				<option value="">Female</option>
+		    			</select>
+		    			<div class="valid-tooltip">Wow!!!</div>
+		    			<div class="invalid-tooltip">Select your gender</div>
+		    		</div>
+		    		<div class="col-md-4">
+		    			<label for="txtbdate" class="form-label">Birthday</label>
+		    			<input type="date" class="form-control" id="txtbdate" required>
+		    		</div>
+		    		<div class="col-md-4">
+		    			<label for="txtmobile" class="form-label">Mobile No</label>
+		    			<input type="number" class="form-control" id="txtmobile" required>
+		    		</div>
+
+		    		<div class="col-12">
+		    			<label for="" class="form-label d-block">Skills</label>
+		    			<div class="form-check-inline">
+			                <input type="checkbox" class="form-check-input" id="chkhtml" required name="skill">
+			                <label for="chkhtml" class="form-check-label">HTML5</label>
+			            </div>
+			            
+			            <div class="form-check form-check-inline">
+			                <input type="checkbox" class="form-check-input" id="chkjavascript" required name="skill">
+			                <label for="chkjavascript" class="form-check-label">JavaScript</label>
+			            </div>
+
+			            <div class="form-check-inline">
+			                <input type="checkbox" class="form-check-input" id="chkphp" required name="skill">
+			                <label for="chkphp" class="form-check-label">PHP</label>
+			            </div>
+
+			            <div class="form-check-inline">
+			                <input type="checkbox" class="form-check-input" id="chkpython" required name="skill">
+			                <label for="chkpython" class="form-check-label">Python</label>
+			            </div>
+			            <div class="valid-tooltip">Wornderfull!!!</div>
+		    					<div class="invalid-tooltip">Select at least one skill</div>
+		    		</div>
+
+		    		<div class="col-12">
+		    			<label for="txtfile" class="form-label">Profile Picture</label>
+    					<input type="file" class="form-control" id="txtfile" required>
+		    		</div>
+
+		    		<div class="col-12">
+		    			<label for="txtaddress" class="form-label">Address</label>
+    					<textarea class="form-control" rows="5" id="txtaddress" required></textarea>
+		    		</div>
+		    		
+		    		<div class="col-12">
+		    			<input type="checkbox" class="form-check-input" id="chkagree" required>
+                    	<label class="form-check-label" for="chkagree">Agree to terms and conditions.</label>
+		    		</div>
+		    	</div>
+		  </div>
+		  <div class="card-footer bg-white text-end py-3">
+		    <button type="submit" class="btn btn-success">
+		    	<i class="bi bi-check-circle"></i> Register</button>
+		    <button type="submit" class="btn btn-danger">
+		    	<i class="bi bi-x-circle"></i> Cancel</button>
+		  </div>
+		</div> <!-- card -->
+	</form>
+	</div>
+    </div>
+
+    </div>
+
+
+
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/custom.js"></script>
+
+  </body>
+</html>

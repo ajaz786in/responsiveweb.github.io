@@ -1,0 +1,18 @@
+		.overlay{
+			opacity:0;
+			transition:0.5s;
+		}
+		.img-wrapper{
+			overflow:hidden;
+		}
+		.img-wrapper:hover .overlay{
+			opacity:1;
+			background-color:rgba(255,0,0,0.8);
+			cursor:pointer;
+		}
+		.img-fluid{
+			transition:0.5s;
+		}
+		.img-wrapper:hover .img-fluid{
+			transform:scale(1.3,1.3);
+		}
